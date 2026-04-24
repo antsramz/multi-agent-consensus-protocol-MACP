@@ -1,0 +1,37 @@
+{
+  "template_name": "Multi-Agent Consensus Protocol (MACP)",
+  "description": "A deterministic consensus mechanism for autonomous agents to agree on shared decisions or outputs.",
+  "inputs": {
+    "proposal_set": {
+      "type": "list",
+      "description": "List of proposals submitted by agents."
+    },
+    "voting_rules": {
+      "type": "object",
+      "description": "Rules defining how votes are counted and consensus is reached."
+    },
+    "agent_registry": {
+      "type": "list",
+      "description": "List of participating agents with identifiers."
+    }
+  },
+  "workflow": [
+    {
+      "step": "collect_proposals",
+      "action": "Agents submit proposals to the consensus pool."
+    },
+    {
+      "step": "vote",
+      "action": "Each agent votes according to deterministic rules."
+    },
+    {
+      "step": "tally",
+      "action": "Votes are tallied using the defined voting rules."
+    },
+    {
+      "step": "finalize",
+      "action": "Consensus result is produced in machine-readable form."
+    }
+  ],
+  "output_format": "json"
+}
